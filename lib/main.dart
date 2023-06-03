@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:quzi1/SharedPreController.dart';
-import 'package:quzi1/home.dart';
+import 'package:quzi1/api/HomeApi.dart';
 import 'package:quzi1/login.dart';
 
 Future<void> main() async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           duration: 5000,
           splashTransition: SplashTransition.rotationTransition,
           backgroundColor: Colors.blue,
-          nextScreen: SharedPreController().getData("isLogin")?HomePage():LoginPage(),
+          nextScreen: SharedPreController().getData("isLogin")?HomeAPI():LoginPage(),
       ),
     );
   }

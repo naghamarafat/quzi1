@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quzi1/home.dart';
+import 'package:quzi1/api/HomeApi.dart';
+
 
 import 'SharedPreController.dart';
 
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                       SharedPreController sh =  SharedPreController();
                       await sh.getInit();
                       sh.setData(key: "isLogin",value: b);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(), ));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomeAPI(), ));
                     }
                   },
                   child: Text("Login")),
